@@ -12,6 +12,7 @@ public class ReverseLinkedList {
 			if (i == 1) {
 				head.next = temp;
 			}
+			temp = temp.next;
 		}
 		PalinLinkedList ans = reverseList(head);
 		printElement(ans);

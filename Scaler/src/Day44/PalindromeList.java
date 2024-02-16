@@ -9,7 +9,10 @@ public class PalindromeList {
 		for (int i = 1; i < array.length; i++) {
 			PalinLinkedList new_node = new PalinLinkedList(array[i]);
 			temp.next = new_node;
-			head.next = temp;
+			if (i == 1) {
+				head.next = temp;
+			}
+			temp = temp.next;
 		}
 		int ans = checkPalindromeList(head);
 		System.out.print(ans);
@@ -49,11 +52,12 @@ public class PalindromeList {
 		}
 		return nh;
 	}
+
 	public static void printElement(PalinLinkedList head) {
 		PalinLinkedList temp = head;
 		while (temp != null) {
 			System.out.print(temp.val);
 			temp = temp.next;
 		}
-	}	
+	}
 }
