@@ -1,8 +1,8 @@
-package Day52;
+package Day53;
 
 import java.util.ArrayList;
 
-public class PostOrderTransversal {
+public class PreOrderTransversal {
 
 	static ArrayList<Integer> ans = new ArrayList<Integer>();
 	
@@ -16,10 +16,10 @@ public class PostOrderTransversal {
 		if(A==null){
             return ans;
         }
-
+		
+		ans.add(A.data);
 		preOrderTransversal(A.left);
 		preOrderTransversal(A.right);
-		ans.add(A.data);
 		
 		return ans;
 	}

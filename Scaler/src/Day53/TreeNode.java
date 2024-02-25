@@ -1,4 +1,4 @@
-package Day52;
+package Day53;
 
 public class TreeNode {
 	public int data;
